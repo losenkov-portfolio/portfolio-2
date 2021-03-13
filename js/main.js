@@ -1,4 +1,5 @@
 $(function() {
+  const $link = $('[data-link="true"]')
   $('.slider__inner').slick({
     dots: true,
     arrows: true,
@@ -31,8 +32,22 @@ $(function() {
     $('.header__menu').slideToggle(300)
     $('.header__btn').toggleClass('open')
   })
+  $('.header__theme-btn').on('click', () => {
+    $link.toggleClass('black')
+    $link[0].classList.contains('black') ? $link[0].href = 'css/black-theme.css' : $link[0].href = 'css/style.css'
+    $('body').css({
+      opacity: 0,
+      transition: 'opacity 0.1s'
+    })
+    setTimeout(function() {
+      $('body').css({
+        opacity: 1,
+        transition: 'opacity 0.3s',
+      })
+    }, 300);
+  })
   
-  if ($(window).width() < 600) {
+  if (window.innerWidth < 600) {
     $('.facts__table-top').on('click', () => {
       $('.facts__list').slideToggle(300)
       $('.facts__table-arrow').toggleClass('open')
@@ -53,8 +68,9 @@ class Tabs {
   }
   
   listener() {
-    this.$menu.addEventListener('click', event => {
-      const {id} = event.target.dataset
+    this.$menu.addEventListener('mouseover', event => {
+      const $el = event.target.closest(`[data-id]`)
+      const {id} = $el.dataset
       id ? this.opener(id) : null
     })
   }
