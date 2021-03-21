@@ -54,8 +54,8 @@
             Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты. Реторический заголовок свое языком до его ручеек.
           </div>
           <div class="top__buttons">
-            <button class="top__btn active">заказать</button>
-            <button class="top__btn icon">смотреть видео</button>
+            <a href="#top-popup" class="top__btn active" data-effect="mfp-zoom-in">заказать</a>
+            <a href="#top-popup" class="top__btn icon" data-effect="mfp-zoom-in">смотреть видео</a>
           </div>
         </div>
         <div class="top__img">
@@ -411,13 +411,13 @@
               </div>
             </li>
           </ul>
-          <button class="facts__table-btn">
+          <a href="#download-popup" data-effect="mfp-zoom-in" class="facts__table-btn">
             скачать состав <span>(50KB)</span>
-          </button>
+          </a>
         </div>
         <div class="facts__items" data-menu="items">
           <div class="facts__item" data-item="1">
-            <div class="facts__item-img" style="background-image: url('images/img/facts-img.png');"></div>
+            <div class="facts__item-img" style="background-image: url('images/img/facts-img-au.jpg');"></div>
             <div class="facts__item-name">
               <div class="slider__box">
                 <div class="slider__box-title">
@@ -563,9 +563,7 @@
         <div class="product__text">
           Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты. Несколько коварный точках осталось если деревни снова, что подпоясал строчка своих послушавшись до продолжил коварных пор инициал ее безопасную. Которое.
         </div>
-        <button class="product__btn top__btn active">
-          заказать
-        </button>
+        <a href="#top-popup" class="product__btn top__btn active" data-effect="mfp-zoom-in">заказать</a>
       </div>
     </div>
   </section>
@@ -582,7 +580,7 @@
         <form class="sub__form">
           <div class="sub__box">
             <input type="text" class="sub__input" placeholder="Введите Ваш Email"/>
-            <button class="sub__btn">подписаться</button>
+            <a href="#sub-popup" class="sub__btn" data-effect="mfp-zoom-in">подписаться</a>
           </div>
         </form>
       </div>
@@ -605,7 +603,7 @@
           </div>
           <input type="text" class="question__form-subj" placeholder="Тема">
           <textarea class="question__form-textarea" placeholder="Вопрос/Предложение"></textarea>
-          <button class="question__form-btn">Отправить</button>
+          <a href="#question-popup" class="question__form-btn" data-effect="mfp-zoom-in">Отправить</a>
         </form>
       </div>
     </div>
@@ -639,8 +637,43 @@
       </div>
     </div>
   </footer>
+  
+  <div class="popups">
+    <div id="top-popup" class="white-popup mfp-with-anim mfp-hide">
+      <h2 class="top-popup__title">Supplement</h2>
+      <p class="top-popup__text">
+        Оформление заказа: 
+      </p>
+      <input class="top-popup__input" type="text" placeholder="введите адрес доставки: " />
+      <input class="top-popup__input" type="text" placeholder="введите email: " />
+      <input class="top-popup__input" type="text" placeholder="введите номер заказа: " />
+      <button class="top-popup__button close-btn-i">
+        оформить
+      </button>
+    </div>
+    <div id="download-popup" class="white-popup mfp-with-anim mfp-hide">
+      <h2 class="top-popup__title">Supplement</h2>
+      <p class="top-popup__text">
+        Скачать состав могут только те, кто сделал заказ на $2+
+      </p>
+    </div>
+    <div id="sub-popup" class="white-popup mfp-with-anim mfp-hide">
+      <h2 class="top-popup__title">Supplement</h2>
+      <p class="top-popup__text">
+        Вы успешно подписались на рассылку
+      </p>
+    </div>
+    <div id="question-popup" class="white-popup mfp-with-anim mfp-hide">
+      <h2 class="top-popup__title">Supplement</h2>
+      <p class="top-popup__text">
+        Вы успешно задали вопрос. Ожидайте ответа на вашей почте
+      </p>
+    </div>
+  </div>
+  
   <script src="js/jquery.min.js"></script>
   <script src="js/slick.min.js"></script>
+  <script src="js/jquery.magnific-popup.min.js"></script>
   <script src="js/main.js"></script>
 </body>
 </html>

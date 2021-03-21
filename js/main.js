@@ -57,6 +57,57 @@ $(function() {
       $('.facts__table-arrow').toggleClass('open')
     })
   }
+  
+  $('.top__btn').magnificPopup({
+    type: 'inline',
+    removalDelay: 500, //delay removal by X to allow out-animation
+    callbacks: {
+        beforeOpen: function () {
+            this.st.mainClass = this.st.el.attr('data-effect');
+        }
+    },
+    midClick: true // allow opening popup on middle mouse click. Always set it to true if you don't provide alternative source.
+  });
+  $('.facts__table-btn').magnificPopup({
+    type: 'inline',
+    removalDelay: 500, //delay removal by X to allow out-animation
+    callbacks: {
+        beforeOpen: function () {
+            this.st.mainClass = this.st.el.attr('data-effect');
+        }
+    },
+    midClick: true // allow opening popup on middle mouse click. Always set it to true if you don't provide alternative source.
+  });
+  $('.sub__btn').magnificPopup({
+    type: 'inline',
+    removalDelay: 500, //delay removal by X to allow out-animation
+    callbacks: {
+        beforeOpen: function () {
+            this.st.mainClass = this.st.el.attr('data-effect');
+        }
+    },
+    midClick: true // allow opening popup on middle mouse click. Always set it to true if you don't provide alternative source.
+  });
+  $('.sub__btn').magnificPopup({
+    type: 'inline',
+    removalDelay: 500, //delay removal by X to allow out-animation
+    callbacks: {
+        beforeOpen: function () {
+            this.st.mainClass = this.st.el.attr('data-effect');
+        }
+    },
+    midClick: true // allow opening popup on middle mouse click. Always set it to true if you don't provide alternative source.
+  });
+  $('.question__form-btn').magnificPopup({
+    type: 'inline',
+    removalDelay: 500, //delay removal by X to allow out-animation
+    callbacks: {
+        beforeOpen: function () {
+            this.st.mainClass = this.st.el.attr('data-effect');
+        }
+    },
+    midClick: true // allow opening popup on middle mouse click. Always set it to true if you don't provide alternative source.
+  });
 })
 
 class Tabs {
